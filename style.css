@@ -1,0 +1,339 @@
+/* General Styling */
+:root {
+    --primary-color: #00ADB5;
+    --secondary-color: #EEEEEE;
+    --dark-color: #222831;
+    --light-color: #393E46;
+    --card-bg: var(--light-color);
+    --text-color: var(--secondary-color);
+    --shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    background-color: var(--dark-color);
+    color: var(--text-color);
+    overflow-x: hidden; /* Prevents horizontal scroll from animations */
+}
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+    overflow: hidden;
+    padding: 0 2rem;
+}
+
+a {
+    text-decoration: none;
+    color: var(--text-color);
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--primary-color);
+}
+
+.btn {
+    display: inline-block;
+    background: var(--primary-color);
+    color: var(--dark-color);
+    padding: 1rem 2rem;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+    background: #007F87;
+    transform: translateY(-3px);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.animated-section {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.animated-section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Header & Navbar */
+.hero {
+    background: url('https://images.unsplash.com/photo-1548690312-0081076b668d?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center center/cover;
+    height: 100vh;
+    color: #fff;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 2rem;
+}
+
+.navbar {
+    position: fixed; /* Fixed navigation bar */
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 5rem;
+    background: rgba(0,0,0,0.7);
+    backdrop-filter: blur(5px);
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+/* New Sections */
+section {
+    padding: 4rem 0;
+    text-align: center;
+}
+
+section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: var(--primary-color);
+}
+
+/* Philosophy Section */
+.philosophy-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.philosophy-content > p {
+    max-width: 700px;
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+}
+
+.philosophy-card {
+    background: var(--light-color);
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: var(--shadow);
+    transition: transform 0.3s ease;
+    width: 100%;
+    max-width: 300px;
+}
+
+.philosophy-card:hover {
+    transform: translateY(-10px);
+}
+
+.philosophy-card .icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.philosophy-card h3 {
+    color: var(--primary-color);
+}
+
+/* Exercises Section (existing) */
+.exercise-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.exercise-card {
+    background: var(--card-bg);
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    text-align: left;
+    color: var(--text-color);
+}
+
+.exercise-card:hover {
+    transform: translateY(-10px);
+}
+
+.exercise-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 1.5rem;
+}
+
+.card-content h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--primary-color);
+}
+
+.card-content p {
+    font-size: 0.9rem;
+    color: var(--secondary-color);
+}
+
+/* Pricing Section */
+.pricing-grid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.plan-card {
+    background: var(--light-color);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    transition: transform 0.3s ease;
+    width: 300px;
+    text-align: left;
+}
+
+.plan-card:hover {
+    transform: translateY(-10px);
+}
+
+.plan-card.featured {
+    background: var(--primary-color);
+    color: var(--dark-color);
+    transform: scale(1.05);
+    border: 2px solid var(--primary-color);
+}
+
+.plan-card.featured h3,
+.plan-card.featured .price {
+    color: var(--dark-color);
+}
+
+.plan-card h3 {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.price {
+    font-size: 3rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+
+.price span {
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.plan-card ul {
+    list-style: none;
+    margin-bottom: 2rem;
+}
+
+.plan-card li {
+    margin-bottom: 0.5rem;
+}
+
+.check-icon {
+    margin-right: 0.5rem;
+    color: var(--primary-color);
+}
+
+.plan-card.featured .btn {
+    background: var(--dark-color);
+    color: var(--primary-color);
+}
+
+/* Contact Section */
+.contact-section {
+    padding-top: 2rem;
+    text-align: center;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: auto;
+    text-align: left;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 1rem;
+    border: 1px solid var(--light-color);
+    background: var(--light-color);
+    color: var(--text-color);
+    border-radius: 5px;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 1.5rem 2rem;
+    }
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+    .nav-links {
+        display: none; /* Hide for smaller screens */
+    }
+    .philosophy-content {
+        flex-direction: column;
+    }
+    .plan-card {
+        width: 100%;
+    }
+}

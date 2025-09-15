@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness Clone</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="hero">
+        <nav class="navbar">
+            <h1 class="logo">💪 Fitness</h1>
+            <ul class="nav-links">
+                <li><a href="#exercises">Exercises</a></li>
+                <li><a href="#philosophy">Philosophy</a></li>
+                <li><a href="#plans">Plans</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="hero-content">
+            <h1>Your Journey to a Stronger You</h1>
+            <p>Discover a variety of exercises tailored to your goals. Let's get moving!</p>
+            <button class="btn" id="explore-btn">Explore Exercises</button>
+        </div>
+    </header>
+
+    <main class="container">
+        <section id="philosophy" class="animated-section">
+            <h2>Our Philosophy</h2>
+            <div class="philosophy-content">
+                <p>At Fitness, we believe that fitness is a journey, not a destination. Our approach focuses on building a sustainable lifestyle through balanced workouts, proper nutrition, and mental well-being. We are here to guide and motivate you every step of the way.</p>
+                <div class="philosophy-card">
+                    <span class="icon">🧘‍♀️</span>
+                    <h3>Mindful Movement</h3>
+                    <p>Connect with your body through intentional and purposeful exercise.</p>
+                </div>
+                <div class="philosophy-card">
+                    <span class="icon">🍎</span>
+                    <h3>Nourish & Grow</h3>
+                    <p>Fuel your body with wholesome food to support your workouts and recovery.</p>
+                </div>
+                <div class="philosophy-card">
+                    <span class="icon">🏋️‍♂️</span>
+                    <h3>Strength in Consistency</h3>
+                    <p>Achieve lasting results through consistent effort and dedication.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="exercises" class="exercises-section animated-section">
+            <h2>Popular Exercises</h2>
+            <div class="exercise-grid">
+                </div>
+        </section>
+        
+        <section id="plans" class="pricing-section animated-section">
+            <h2>Choose Your Plan</h2>
+            <div class="pricing-grid">
+                <div class="plan-card">
+                    <h3>Basic</h3>
+                    <p class="price">$19<span>/mo</span></p>
+                    <ul>
+                        <li><span class="check-icon">✔</span> Access to all exercises</li>
+                        <li><span class="check-icon">✔</span> Basic workout routines</li>
+                        <li><span class="check-icon">✔</span> Community forum access</li>
+                    </ul>
+                    <button class="btn">Select Plan</button>
+                </div>
+                <div class="plan-card featured">
+                    <h3>Premium</h3>
+                    <p class="price">$49<span>/mo</span></p>
+                    <ul>
+                        <li><span class="check-icon">✔</span> Everything in Basic</li>
+                        <li><span class="check-icon">✔</span> **Personalized plan**</li>
+                        <li><span class="check-icon">✔</span> 1-on-1 coaching call</li>
+                        <li><span class="check-icon">✔</span> Advanced exercise guides</li>
+                    </ul>
+                    <button class="btn">Select Plan</button>
+                </div>
+                <div class="plan-card">
+                    <h3>Pro</h3>
+                    <p class="price">$99<span>/mo</span></p>
+                    <ul>
+                        <li><span class="check-icon">✔</span> Everything in Premium</li>
+                        <li><span class="check-icon">✔</span> **24/7 expert support**</li>
+                        <li><span class="check-icon">✔</span> Nutrition plans</li>
+                        <li><span class="check-icon">✔</span> Live online classes</li>
+                    </ul>
+                    <button class="btn">Select Plan</button>
+                </div>
+            </div>
+        </section>
+        
+        <section id="contact" class="contact-section animated-section">
+            <h2>Get In Touch</h2>
+            <form class="contact-form">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="btn">Send Message</button>
+            </form>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
